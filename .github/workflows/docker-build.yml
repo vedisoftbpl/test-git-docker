@@ -25,8 +25,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./docker-demo-data-git
+          file: ./docker-demo-data-git/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
-        working-directory: ./docker-demo-data-git  
